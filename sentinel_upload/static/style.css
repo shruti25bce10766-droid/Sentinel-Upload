@@ -1,96 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    color: white;
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.7);
+    background: white;
     padding: 40px;
-    border-radius: 12px;
-    width: 420px;
+    border-radius: 10px;
     text-align: center;
-    position: relative;
+    width: 350px;
 }
 
 .logo {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-h1 {
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    font-size: 14px;
-    margin-bottom: 20px;
-    opacity: 0.8;
-}
-
-input[type="file"] {
-    margin: 20px 0;
-    color: white;
+    width: 80px;
+    margin-bottom: 15px;
 }
 
 button {
     padding: 10px 20px;
+    background: #2a5298;
+    color: white;
     border: none;
-    background: #00c6ff;
-    color: black;
-    font-weight: bold;
-    border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
-    background: #00e1ff;
-    transform: scale(1.05);
+    background: #1e3c72;
 }
 
-/* Upload Animation */
-button:active {
-    animation: pulse 0.4s;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.9); }
-    100% { transform: scale(1); }
-}
-
-/* Popup Styling */
 .popup {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    font-size: 14px;
-    animation: fadeIn 0.5s ease-in-out;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    animation: fadeOut 4s forwards;
 }
 
 .success {
-    background-color: #2ecc71;
-    color: black;
+    background: green;
 }
 
 .error {
-    background-color: #e74c3c;
-    color: white;
+    background: red;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.info {
-    margin-top: 25px;
-    text-align: left;
-    font-size: 13px;
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
 }
